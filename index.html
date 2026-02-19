@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bike Detail Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🏍 BikeWorld</h1>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search bike...">
+
+    <select id="priceFilter">
+      <option value="all">All Prices</option>
+      <option value="1">Below ₹1 Lakh</option>
+      <option value="2">₹1–2 Lakh</option>
+      <option value="3">₹2–3 Lakh</option>
+      <option value="4">Above ₹3 Lakh</option>
+    </select>
+
+    <button id="viewCartBtn">🛒 Cart (<span id="cartCount">0</span>)</button>
+  </div>
+</header>
+
+<div class="main">
+  <div class="bike-grid" id="bikeGrid"></div>
+
+  <div class="bike-details" id="details">
+    <h2>Select a bike</h2>
+  </div>
+</div>
+
+<!-- CART MODAL -->
+<div class="cart-modal" id="cartModal">
+  <div class="cart-box">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <button onclick="closeCart()">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
